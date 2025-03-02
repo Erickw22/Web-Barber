@@ -10,11 +10,12 @@
 html, body {
     height: 100%;
     background: linear-gradient(to bottom, #000000, #555353);
-    padding: 0 10px; /* Reduzindo o padding lateral para telas menores */
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
 }
 
+/* Body */
 body {
     flex: 1;
 }
@@ -22,12 +23,13 @@ body {
 /* Header */
 header {
     background-color: #333;
-    padding: 10px 20px; /* Reduzindo o padding do header */
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px; /* Reduzindo o raio da borda */
-    margin: 10px; /* Reduzindo a margem */
+    border-radius: 20px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -38,20 +40,26 @@ header {
 }
 
 header img {
-    width: 100px; /* Reduzindo o tamanho da imagem */
+    width: 120px;
+    transition: width 0.3s ease;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Reduzindo o gap entre os itens do menu */
+    gap: 20px;
+    transition: gap 0.3s ease;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px; /* Reduzindo o tamanho da fonte */
-    transition: 0.3s;
+    font-size: clamp(16px, 1.2vw, 18px); /* Fontes responsivas */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -59,66 +67,79 @@ nav ul li a:hover {
 }
 
 .bi {
-    font-size: 20px; /* Reduzindo o tamanho do ícone */
+    font-size: clamp(20px, 2vw, 24px); /* Icones responsivos */
 }
 
 /* Home */
 .home-content {
-    padding: 50px 10px; /* Reduzindo o padding */
+    padding: 60px 20px; /* Reduzi o padding para telas menores */
     text-align: center;
     color: white;
 }
 
 .home-text h1 {
-    font-size: 30px; /* Reduzindo o tamanho da fonte */
-    margin-bottom: 8px;
+    font-size: clamp(30px, 4vw, 40px); /* Fontes responsivas */
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .home-text p {
-    font-size: 16px; /* Reduzindo o tamanho da fonte */
+    font-size: clamp(16px, 1.5vw, 18px); /* Fontes responsivas */
 }
 
 /* Produtos */
 #servicos {
-    padding: 30px 10px; /* Reduzindo o padding */
+    padding: 40px 20px; /* Reduzi o padding para telas menores */
     text-align: center;
     color: white;
 }
 
 .titulo-principal {
-    font-size: 24px; /* Reduzindo o tamanho da fonte */
-    margin-bottom: 15px;
+    font-size: clamp(24px, 3vw, 28px); /* Fontes responsivas */
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .servicos-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajustando a largura mínima */
-    gap: 20px; /* Reduzindo o gap */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; /* Reduzi o gap para telas menores */
     padding: 0;
 }
 
 .servicos-list li {
     background-color: #fff;
-    border-radius: 12px; /* Reduzindo o raio da borda */
-    padding: 20px; /* Reduzindo o padding interno */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    text-align: center;
+    padding: 20px; /* Reduzi o padding interno */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicos-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .servicos-list img {
-    width: 80%;
-    max-height: 120px;
-    margin-bottom: 10px;
+    width: 90%;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .servico-descricao {
-    font-size: 14px;
-    margin: 8px 0;
+    font-size: clamp(14px, 1.3vw, 16px); /* Fontes responsivas */
+    margin: 10px 0;
+    color: #333;
 }
 
 .servico-preco {
-    font-size: 16px;
+    font-size: clamp(16px, 1.6vw, 18px); /* Fontes responsivas */
+    color: #00ff7f;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -126,14 +147,15 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px; /* Reduzindo o padding */
-    border-radius: 15px; /* Reduzindo o raio da borda */
-    margin: 10px; /* Reduzindo a margem */
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
 }
 
 footer img {
-    width: 80px; /* Reduzindo o tamanho da imagem */
-    margin-bottom: 8px;
+    width: 100px;
+    margin-bottom: 10px;
 }
 
 /* Responsividade */
@@ -145,11 +167,15 @@ footer img {
 
     nav ul {
         flex-direction: column;
-        gap: 8px;
-        margin: 8px 0;
+        gap: 10px;
+        margin: 10px 0;
     }
 
     .servicos-list {
         grid-template-columns: 1fr;
+    }
+
+    .servico-descricao, .servico-preco {
+        font-size: 14px;
     }
 }
