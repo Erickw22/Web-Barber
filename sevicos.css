@@ -1,0 +1,179 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo Geral */
+html, body {
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #555353); /* Gradiente de fundo */
+    padding: 0 20px; /* Distância de 20px das laterais para todo o conteúdo */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body */
+body {
+    flex: 1;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px; 
+    margin: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff7f;
+}
+
+.bi {
+    font-size: 24px;
+}
+
+/* Home */
+.home-content {
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.home-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.home-text p {
+    font-size: 18px;
+}
+
+/* Produtos */
+#servicos {
+    padding: 50px 20px; /* Distância nas laterais */
+    text-align: center;
+    color: white;
+}
+
+.titulo-principal {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.servicos-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Largura mínima ajustada */
+    gap: 40px; /* Aumenta ainda mais o espaçamento entre os cards */
+    padding: 0;
+}
+
+/* Estilo dos itens da lista (Cards) */
+.servicos-list li {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    text-align: center;
+    padding: 30px; /* Aumenta o padding interno para maior espaçamento dentro do card */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicos-list li:hover {
+    transform: translateY(-5px); /* Animação de elevação ao passar o mouse */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Imagem do card */
+.servicos-list img {
+    width: 90%; /* Ajusta a largura da imagem para 90% do tamanho do card */
+    max-height: 150px; /* Limita a altura da imagem para 150px */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Descrição e preço */
+.servico-descricao {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333; /* Cor para o texto da descrição */
+}
+
+.servico-preco {
+    font-size: 18px;
+    color: #00ff7f; /* Cor verde para o preço */
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    margin: 20px; /* Distância entre o footer e as bordas da tela */
+}
+
+footer img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .servicos-list {
+        grid-template-columns: 1fr; /* Exibe os produtos em uma coluna em dispositivos pequenos */
+    }
+
+    .servico-descricao, .servico-preco {
+        font-size: 14px;
+    }
+}

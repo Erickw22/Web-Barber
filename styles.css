@@ -1,0 +1,250 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo Geral */
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px; 
+    margin: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff7f;
+}
+
+.bi {
+    font-size: 24px;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 60px;
+}
+
+.home-content {
+    background-image: url('imagens/imagesfundo2.webp');
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    max-width: 100%;
+    height: 800px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Mapa */
+.mapa {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Mesmo gradiente de fundo */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+}
+
+.mapa h3 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.mapa p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.mapa iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Diferenciais */
+.diferenciais {
+    padding: 50px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.titulo-principal {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.diferenciais-card {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+.diferenciais h3 {
+    font-size: 26px;
+    margin-bottom: 10px; /* Reduz o espaço abaixo do título */
+    color: #fff;
+    text-align: center; /* Centraliza o título */
+    width: 100%; /* Garante que o título ocupe toda a largura */
+}
+
+.diferenciais ul {
+    list-style: none;
+    padding: 0;
+    max-width: 45%; /* Reduz a largura da lista para aproximar do texto */
+    margin: 10px; /* Adiciona margem para separar os itens */
+}
+
+.diferenciais ul li {
+    font-size: 18px;
+    margin-bottom: 8px; /* Reduz o espaço entre os itens da lista */
+    color: #fff;
+}
+
+.diferenciais .imagem {
+    max-width: 45%; /* Reduz a largura da imagem para aproximar do texto */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Adiciona margem para separar a imagem */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+}
+
+footer img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    .diferenciais-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diferenciais .imagem {
+        max-width: 90%; /* Aumenta a largura da imagem em telas menores */
+        margin-top: 10px;
+    }
+
+    .diferenciais ul {
+        max-width: 90%; /* Aumenta a largura da lista em telas menores */
+    }
+}
