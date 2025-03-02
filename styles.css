@@ -26,9 +26,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px; 
+    border-radius: 20px;
     margin: 20px;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -37,23 +38,19 @@ header {
 }
 
 header img {
-    width: 120px;
+    width: 100px; /* Reduz o tamanho da logo para telas menores */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 15px; /* Reduz o espaçamento entre os links */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px; /* Reduz o tamanho da fonte dos links */
     transition: 0.3s;
 }
 
@@ -62,7 +59,7 @@ nav ul li a:hover {
 }
 
 .bi {
-    font-size: 24px;
+    font-size: 20px; /* Reduz o tamanho dos ícones */
 }
 
 /* Home Section */
@@ -70,17 +67,18 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 0 60px;
+    height: auto; /* Altura automática para se adaptar ao conteúdo */
+    padding: 20px; /* Reduz o padding para telas menores */
+    margin-top: 20px; /* Adiciona margem superior para separar do header */
 }
 
 .home-content {
     background-image: url('imagens/imagesfundo2.webp');
     background-size: cover;
     background-position: center;
-    width: 80%;
+    width: 100%; /* Ocupa toda a largura disponível */
     max-width: 100%;
-    height: 800px;
+    height: auto; /* Altura automática para se adaptar ao conteúdo */
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -92,45 +90,46 @@ nav ul li a:hover {
 }
 
 .home-content h1 {
-    font-size: 30px;
+    font-size: 24px; /* Reduz o tamanho da fonte do título */
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .home-content p {
-    font-size: 18px;
+    font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
     margin-top: 10px;
 }
 
-
 .titulo {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 22px; /* Reduz o tamanho da fonte do título geral */
+    margin-bottom: 15px;
 }
 
 /* Mapa */
 .mapa {
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #2c3e50, #34495e); /* Mesmo gradiente de fundo */
+    padding: 30px 15px; /* Reduz o padding para telas menores */
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    backdrop-filter: blur(10px);
+    margin: 20px;
 }
 
 .mapa h3 {
-    font-size: 26px;
+    font-size: 20px; /* Reduz o tamanho da fonte do título do mapa */
     color: #fff;
     margin-bottom: 10px;
 }
 
 .mapa p {
-    font-size: 18px;
+    font-size: 16px; /* Reduz o tamanho da fonte do parágrafo do mapa */
     color: #fff;
     margin-bottom: 20px;
 }
 
 .mapa iframe {
+    width: 100%; /* Ocupa toda a largura disponível */
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -138,7 +137,7 @@ nav ul li a:hover {
 
 /* Diferenciais */
 .diferenciais {
-    padding: 50px;
+    padding: 30px 15px; /* Reduz o padding para telas menores */
     background: linear-gradient(135deg, #2c3e50, #34495e);
     text-align: left;
     border-radius: 20px;
@@ -147,54 +146,54 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: auto; /* Altura automática para se adaptar ao conteúdo */
     width: 100%;
     flex-direction: column;
+    margin: 20px;
 }
 
 .titulo-principal {
-    font-size: 30px;
+    font-size: 24px; /* Reduz o tamanho da fonte do título principal */
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .diferenciais-card {
     display: flex;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    flex-direction: column; /* Organiza os itens em coluna para telas menores */
 }
 
 .diferenciais h3 {
-    font-size: 26px;
-    margin-bottom: 10px; /* Reduz o espaço abaixo do título */
+    font-size: 20px; /* Reduz o tamanho da fonte do título dos diferenciais */
+    margin-bottom: 10px;
     color: #fff;
-    text-align: center; /* Centraliza o título */
-    width: 100%; /* Garante que o título ocupe toda a largura */
+    text-align: center;
+    width: 100%;
 }
 
 .diferenciais ul {
     list-style: none;
     padding: 0;
-    max-width: 45%; /* Reduz a largura da lista para aproximar do texto */
-    margin: 10px; /* Adiciona margem para separar os itens */
+    width: 90%; /* Ocupa mais largura em telas menores */
+    margin: 10px 0;
 }
 
 .diferenciais ul li {
-    font-size: 18px;
-    margin-bottom: 8px; /* Reduz o espaço entre os itens da lista */
+    font-size: 16px; /* Reduz o tamanho da fonte dos itens da lista */
+    margin-bottom: 6px;
     color: #fff;
 }
 
 .diferenciais .imagem {
-    max-width: 45%; /* Reduz a largura da imagem para aproximar do texto */
+    max-width: 90%; /* Ocupa mais largura em telas menores */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px; /* Adiciona margem para separar a imagem */
+    margin: 10px 0;
 }
 
 /* Footer */
@@ -209,7 +208,7 @@ footer {
 }
 
 footer img {
-    width: 100px;
+    width: 80px; /* Reduz o tamanho da logo do footer */
     margin-bottom: 10px;
 }
 
@@ -224,27 +223,5 @@ footer img {
         flex-direction: column;
         gap: 10px;
         margin: 10px 0;
-    }
-
-    #home h1 {
-        font-size: 40px;
-    }
-
-    .home-content p {
-        font-size: 18px;
-    }
-
-    .diferenciais-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .diferenciais .imagem {
-        max-width: 90%; /* Aumenta a largura da imagem em telas menores */
-        margin-top: 10px;
-    }
-
-    .diferenciais ul {
-        max-width: 90%; /* Aumenta a largura da lista em telas menores */
     }
 }
